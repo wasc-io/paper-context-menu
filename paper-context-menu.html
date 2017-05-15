@@ -1,0 +1,38 @@
+<link rel="import" href="../polymer/polymer-element.html">
+<!--<link rel="import" href="../polymer/lib/elements/dom-if.html">-->
+<!--<link rel="import" href="../polymer/lib/elements/dom-repeat.html">-->
+
+<!--
+`paper-context-menu`
+Customizable right click context paper element
+
+@demo demo/index.html
+-->
+
+<dom-module id="paper-context-menu">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <h2>Hello [[prop1]]!</h2>
+  </template>
+
+  <script>
+    /** @polymerElement */
+    class PaperContextMenu extends Polymer.Element {
+      static get is() { return 'paper-context-menu'; }
+      static get properties() {
+        return {
+          prop1: {
+            type: String,
+            value: 'paper-context-menu'
+          }
+        };
+      }
+    }
+
+    window.customElements.define(PaperContextMenu.is, PaperContextMenu);
+  </script>
+</dom-module>
